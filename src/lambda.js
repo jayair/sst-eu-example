@@ -1,7 +1,7 @@
-export async function handler () {
+export async function handler (evt, ctx) {
   return {
     statusCode: 200,
-    body: 'Hello super-simple test',
-    headers: { 'Content-Type': 'text/plain' }
+    body: JSON.stringify(evt,null,2),
+    headers: { 'Content-Type': 'application/json' }
   }
 }
